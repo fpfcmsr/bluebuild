@@ -37,6 +37,11 @@ modules:
       - "rm /bitwarden-latest.rpm"
       - "ln -sf /usr/lib/opt/Bitwarden/bitwarden /etc/alternatives/bitwarden"
 
+  - type: systemd
+    system:
+      enabled:
+        - supergfxd
+
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
